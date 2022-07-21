@@ -1,0 +1,60 @@
+/* Custom global styling */
+:root {
+  font-family: "Barlow Condensed", sans-serif;
+}
+.jumbotron {
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: coral;
+  margin: padding;
+}
+.container {
+  text-align: center;
+  max-width: 960px;
+}
+.contact-card {
+  flex-direction: row;
+  margin: 50px;
+  padding: 50px;
+}
+.display-4 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center;
+}
+.card {
+  margin: 25px;
+  display: inline-block;
+  align-items: center;
+  align-content: center;
+}
+.card-body {
+  background-color: skyblue;
+}
+/* medea Queries are used to change the layout at certain break points to assist in making the site responsive */
+@media screen and (max-width: 992px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 770px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
