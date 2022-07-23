@@ -34,6 +34,7 @@
   display: inline-block;
   align-items: center;
   align-content: center;
+  box-shadow: 10px 5px 5px grey;
 }
 .card-body {
   background-color: skyblue;

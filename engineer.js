@@ -3,23 +3,23 @@ module.exports =
 	[
 		{
 			type: 'input',
-			name: 'engineerName',
+			name: 'name',
 			message: 'What is your Engineers name?',
 		},
 		{
 			type: 'input',
-			name: 'engineerId',
+			name: 'id',
 			message: 'What is your Engineers Employee ID?',
 		},
 		{
 			type: 'input',
-			name: 'engineerEmail',
+			name: 'email',
 			message: 'What is your Engineers Email?',
 
 		},
 		{
 			type: 'input',
-			name: 'engineerGitHub',
+			name: 'github',
 			message: 'What is your Engineers GitHub ID?',
 		},
 	]

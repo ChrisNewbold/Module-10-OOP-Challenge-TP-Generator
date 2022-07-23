@@ -7,11 +7,9 @@ const engineerQuestions = require('./engineer')
 const employeeQuestions = require('./newEmployee')
 const internQuestions = require('./intern')
 var inquirer = require('inquirer')
-const newEmployee = require('./newEmployee')
 const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
-const intern = require('./intern')
 var team = []
 
 // TODO: Create a function to write HTML file
@@ -27,7 +25,7 @@ function writeToFile(fileName, data) {
 };
 // function to initialize app
 function init() {
-    console.log(managerQuestions)
+    // console.log(managerQuestions)
     inquirer.prompt(managerQuestions)
         .then((managerData) => {
             console.log(managerData)
@@ -36,15 +34,7 @@ function init() {
             employeePrompts(team)
         })
 }
-console.log(employeeQuestions)
-function engineerPrompts(team) {
-}
-function internPrompts(team) {
-    inquirer.prompt(internQuestions).then((internData) => {
-        team.push(internData)
-        employeePrompts(team)
-    })
-}
+
 function employeePrompts(team) {
     inquirer.prompt(employeeQuestions)
         .then((employeeData) => {
@@ -54,27 +44,26 @@ function employeePrompts(team) {
                         .then((engineerData) => {
                             const engineerMember = new Engineer(engineerData.name, engineerData.id, engineerData.email, engineerData.github)
                             team.push(engineerMember)
+                            employeePrompts(team)
                         })
                     break;
                 case 'Add an Intern':
                     inquirer.prompt(internQuestions)
                         .then((internData) => {
-                            const internMember = new Intern(engineerData.name, engineerData.id, engineerData.email, engineerData.school)
+                            const internMember = new Intern(internData.name, internData.id, internData.email, internData.school) // name, id, email, school
                             team.push(internMember)
+                            employeePrompts(team)
                         })
-                    employeePrompts(employeePrompts);
                     break;
                 case 'finish building my team':
-                    newEmployeePrompts(newEmployeePrompts)
-
-                default: newEmployeePrompts(newEmployeePrompts)
+                    console.log(team)
+                    writeToFile('dist/index.html', generateHTML(team));
+                default:
                     break;
             }
             // writeToFile('index.html', generateHTML(data));
         })
 }
-// make the menu reoccursive
-// ask if i want a new employee or not 
 
 // Function call to initialize app
 init();
