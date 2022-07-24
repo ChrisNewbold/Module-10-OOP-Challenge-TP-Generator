@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs')
 const generateHTML = require('./src/page-template')
-// TODO: Create an array of questions for user input
+// an array of questions for user input
 const managerQuestions = require('./manager')
 const engineerQuestions = require('./engineer')
 const employeeQuestions = require('./newEmployee')
@@ -12,13 +12,14 @@ const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 var team = []
 
-// TODO: Create a function to write HTML file
+// Function declaration to write HTML file
 function writeToFile(fileName, data) {
     console.log(fileName, data)
     fs.writeFile(fileName, data, function (err) {
         if (err) {
             console.log(err);
         } else {
+            // log finished statement
             console.log('Your HTML file has been generated!');
         }
     })
@@ -34,7 +35,7 @@ function init() {
             employeePrompts(team)
         })
 }
-
+// set up switch statements to choose each employee
 function employeePrompts(team) {
     inquirer.prompt(employeeQuestions)
         .then((employeeData) => {
@@ -44,6 +45,7 @@ function employeePrompts(team) {
                         .then((engineerData) => {
                             const engineerMember = new Engineer(engineerData.name, engineerData.id, engineerData.email, engineerData.github)
                             team.push(engineerMember)
+                            // call back employee prompts
                             employeePrompts(team)
                         })
                     break;
@@ -52,16 +54,18 @@ function employeePrompts(team) {
                         .then((internData) => {
                             const internMember = new Intern(internData.name, internData.id, internData.email, internData.school) // name, id, email, school
                             team.push(internMember)
+                            // call back employee prompts
                             employeePrompts(team)
                         })
                     break;
+                // Complete team
                 case 'finish building my team':
                     console.log(team)
+                    // log prompt data to generate HTML file in select folder
                     writeToFile('dist/index.html', generateHTML(team));
                 default:
                     break;
             }
-            // writeToFile('index.html', generateHTML(data));
         })
 }
 

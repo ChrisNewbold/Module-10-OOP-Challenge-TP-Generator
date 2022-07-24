@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 function generateTeam(teamData) {
-
+  // function to generate manager card
   function gererateManager(managerData) {
     return `
         <article class="card" style="width: 18rem">
@@ -16,7 +16,7 @@ function generateTeam(teamData) {
       </article>
         `
   }
-
+  // function to generate engineer card
   function generateEngineer(engineerData) {
     return `
     <article class="card" style="width: 18rem">
@@ -32,6 +32,7 @@ function generateTeam(teamData) {
   </article>
     `
   }
+  // funtion to generate intern data
   function generateIntern(internData) {
     return `
     <article class="card" style="width: 18rem">
@@ -47,7 +48,7 @@ function generateTeam(teamData) {
   </article>
     `
   }
-
+  // calling the prompt data from the switch statment in index.js
   let array = []
   for (let employee of teamData) {
     switch (employee.getRole()) {
@@ -107,6 +108,7 @@ module.exports = team => {
           <p class="lead">Team information and profiles</p>
         </section>
       </header>
+      <!--employee cards-->
       <section class="contact-card">
   ${generateTeam(team)}
   </section>
