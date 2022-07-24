@@ -10,9 +10,9 @@
   background-color: coral;
   margin: padding;
 }
-.container {
+body {
   text-align: center;
-  max-width: 960px;
+  max-width: 100%;
 }
 /* contact card wrap */
 .contact-card {
@@ -20,6 +20,9 @@
   flex-direction: row;
   margin: 50px;
   padding: 50px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 /* header copy */
 .display-4 {
@@ -45,24 +48,4 @@
 /* card header background color */
 .card-body {
   background-color: skyblue;
-}
-/* medea Queries are used to change the layout at certain break points to assist in making the site responsive */
-@media screen and (max-width: 992px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 770px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
 }
