@@ -20,7 +20,6 @@ body {
   flex-direction: row;
   margin: 50px;
   padding: 50px;
-  align-items: center;
   align-content: center;
   justify-content: center;
 }
