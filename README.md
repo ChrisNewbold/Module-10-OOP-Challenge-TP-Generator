@@ -54,7 +54,11 @@ The following Video contains all of the below:
 4. A walkthrough video that demonstrates how the user would enter responses to all of the prompts in the application.
 5. A example of the generated HTML that matches the user input.
 
-![MP4 of generated HTML file](https://drive.google.com/file/d/1DF-7T1aLF_90GMrI8KR8MlOrHfRvo1Qz/view)
+![Click Here to watch MP4](https://drive.google.com/file/d/1DF-7T1aLF_90GMrI8KR8MlOrHfRvo1Qz/view)
+
+OR head over to
+
+https://drive.google.com/file/d/1DF-7T1aLF_90GMrI8KR8MlOrHfRvo1Qz/view
 
 ## Skills Used
 
