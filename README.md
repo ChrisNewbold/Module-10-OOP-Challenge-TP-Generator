@@ -41,8 +41,20 @@ THEN I exit the application, and the HTML is generated
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
 
 ![Screen Shot of generated HTML file](./assets/image/Module-10-OOP-Challenge-TP-Generator.png)
+
+The following image shows a mock-up of the generated HTML’s appearance and functionality:
+
 ![GIF of generated HTML file](./assets/gif/Module-10-OOP-Challenge-TP-Generator.gif)
-![MP$ of generated HTML file](./assets/Mp4/Module-10-OOP-Challenge-TP-Generator.mp4)
+
+The following Video contains all of the below:
+
+1. A walkthrough video that demonstrates the functionality of the team profile generator and passing tests
+2. a walkthrough video that shows all four tests passing from the command line
+3. A walkthrough video that demonstrates how the user would invoke the application from the command line.
+4. A walkthrough video that demonstrates how the user would enter responses to all of the prompts in the application.
+5. A example of the generated HTML that matches the user input.
+
+![MP4 of generated HTML file](https://drive.google.com/file/d/1DF-7T1aLF_90GMrI8KR8MlOrHfRvo1Qz/view)
 
 ## Skills Used
 
