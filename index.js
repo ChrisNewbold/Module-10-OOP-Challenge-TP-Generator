@@ -35,7 +35,7 @@ function init() {
             employeePrompts(team)
         })
 }
-// set up switch statements to choose each employee
+// Uses the data from the prompt answers to determine which type of employee to render
 function employeePrompts(team) {
     inquirer.prompt(employeeQuestions)
         .then((employeeData) => {
