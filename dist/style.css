@@ -2,6 +2,7 @@
 :root {
   font-family: "Barlow Condensed", sans-serif;
 }
+/* bootstrap header class */
 .jumbotron {
   align-items: center;
   text-align: center;
@@ -13,22 +14,26 @@
   text-align: center;
   max-width: 960px;
 }
+/* contact card wrap */
 .contact-card {
   flex-direction: row;
   margin: 50px;
   padding: 50px;
 }
+/* header copy */
 .display-4 {
   text-align: center;
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2;
 }
+/* header sub heading/copy */
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
   text-align: center;
 }
+/* card class adding drop shadow and alignment */
 .card {
   margin: 25px;
   display: inline-block;
@@ -36,6 +41,7 @@
   align-content: center;
   box-shadow: 10px 5px 5px grey;
 }
+/* card header background color */
 .card-body {
   background-color: skyblue;
 }
