@@ -17,8 +17,8 @@ describe("Intern", () => {
     });
 
     it("should be able to get the intern school", () => {
-        const intern = new Intern("Chris", 100, "test@test.com", "Swansea High");
-        expect(intern.getSchool()).toBe("Swansea High");
+        const intern = new Intern("Chris", 100, "test@test.com", "Sydney Uni");
+        expect(intern.getSchool()).toBe("Sydney Uni");
     });
 
     it("should have a role of Intern", () => {
